@@ -1,0 +1,2 @@
+Command to get all ACLs with coloriziation of JSON: aws ec2 describe-network-acls --filters Name=default,Values=true | jq
+Command to filter JSON to get all default ACLs in all VPCs: aws ec2 describe-network-acls --filters Name=default,Values=true | jq '.NetworkAcls[].NetworkAclId'
